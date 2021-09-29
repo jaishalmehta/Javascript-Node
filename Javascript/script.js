@@ -1,34 +1,85 @@
-// this is a simple console logging statement
-console.log("Hello World!");
+// OBJECTS, ARRAYS and JSON
 
-// different types of console logging 
+let animal = new Object()
 
-const message = "This is a message"; 
+animal["name"] = "Clifford";
+animal["type"] = "Dog";
+animal["size"] = "Big";
 
-console.log(message);
+animal.colour = "Red";
 
-console.info(message);
+console.log(animal)
 
-console.warn(message);
+let vehicle = {
+    "type": "Car",
+    "Seats" : 5,
+    "Wheels" : 4,
+};
 
-console.error(message);
+// OBJECTS can be stored in an ARRAY
 
-// to make your console log look unique you can insert HTML styling 
+let garage = [
+    vehicle, 
+    { 
+        "type": "Bike",
+        "Seats" : 1,
+        "Wheels" : 2,
+    }
+]
 
-console.log(`%c` + message, `color: black; background-color: white; font-size: 20px; padding: 5px`)
+// Loop through an ARRAY
 
-// Task 1 
+let x = [1,2,3,4,5];
 
-const firstName = "Jaishal";
-const secondName = "Mehta";
-const myLocation = "London";
-const starSign = "Libra";
-
-console.log(firstName);
-console.log(secondName);
-console.log(myLocation);
-console.log(starSign);
-
-console.log(`%c` + "Hi - My name is " + firstName + " " + secondName + " and I live in " + myLocation, `color: orange; background-color: black;  font-weight: bold; font-size: 20px; padding: 10px`)
+for (
+    let i = 0; i < x.length; i++
+) {
+    console.log(x[i])
+}
 
 
+for(let i of x) {
+    console.log(i)
+}
+
+// ARRAY OBJECT METHODS
+
+console.log(x.reverse());
+
+// JSON
+
+let newJOSN = {
+    "name" : "Jaishal",
+    "age" : 23
+}
+console.log(newJOSN)
+
+let myName = JSON.parse(`{"name" : "Jaishal"}`);
+console.log(myName.name)
+
+let str = JSON.stringify(newJOSN);
+console.log(str)
+
+// Task 5
+
+let myArray = [
+    "hello", "everyone"
+]
+
+console.log(myArray.length)
+
+myArray.push("my", "name", "is", "jaishal")
+
+console.log(myArray)
+
+console.log(myArray.length)
+
+myArray.shift()
+
+console.log(myArray)
+
+for(
+    let elements of myArray
+) {
+    console.log(elements)
+}
