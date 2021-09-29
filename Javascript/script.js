@@ -1,34 +1,49 @@
-// this is a simple console logging statement
-console.log("Hello World!");
+// Conditionals 
 
-// different types of console logging 
+// FALSEY
 
-const message = "This is a message"; 
+let falseOne = 0;
+let falseTwo = ``;
+let falseThree;
+let falseFour = null;
+let falseFive = NaN;
+let falseSix = false;
 
-console.log(message);
+// everything else is TRUTHY
 
-console.info(message);
+// IF statements (also ELSE IF and ELSE)
 
-console.warn(message);
+let a = 3;
 
-console.error(message);
+if (a == 0){
+    console.log("Success!");
+} else if (a != 2) {
+    console.log("Not 2");
+} else {
+    console.log("It must be 2")
+}
 
-// to make your console log look unique you can insert HTML styling 
+// TERNARY IF
 
-console.log(`%c` + message, `color: black; background-color: white; font-size: 20px; padding: 5px`)
+let b = true;
 
-// Task 1 
+if(b == true) {
+    console.log("b is true");
+} else {
+    console.log("b is false");
+}
+b ? console.log("True") : console.log("False");
 
-const firstName = "Jaishal";
-const secondName = "Mehta";
-const myLocation = "London";
-const starSign = "Libra";
+// Task 4
 
-console.log(firstName);
-console.log(secondName);
-console.log(myLocation);
-console.log(starSign);
+let age = 50; 
 
-console.log(`%c` + "Hi - My name is " + firstName + " " + secondName + " and I live in " + myLocation, `color: orange; background-color: black;  font-weight: bold; font-size: 20px; padding: 10px`)
+if(age >= 18 && age <= 64) {
+    console.log("your age is between 18 and 65")
+} else if (age < 18) {
+    console.log("you are underage")
+} else {
+    console.log("your age is not between 18 and 65")
+}
 
-
+age > 51 ? console.log('age is greater than 50') : console.log('age is 50 or under')
