@@ -1,34 +1,33 @@
-// this is a simple console logging statement
-console.log("Hello World!");
+// Data Types
 
-// different types of console logging 
+let aBoolean = true;
+let aNumber = 4;
+let aString = "this is a string";
+let aBigInt = 99999999999999n;
+let aSymbol = Symbol(`description of symbol`);
+let aNull = null;
+let anUndefined; 
 
-const message = "This is a message"; 
+console.log(undefined);
+console.log(typeof(undefined));
 
-console.log(message);
+let myObject;
 
-console.info(message);
+console.log(myObject);
 
-console.warn(message);
+myObject = {
+    key : `value`,
+    age : 23,
+    height : 4.11,
+    name: `Jaishal`
+}
 
-console.error(message);
+console.log(myObject)
 
-// to make your console log look unique you can insert HTML styling 
+// Task 2
 
-console.log(`%c` + message, `color: black; background-color: white; font-size: 20px; padding: 5px`)
+let totalMoney = 4000; 
+let moneyPaidSoFar = 2348;
+let totalLeftToPay = totalMoney - moneyPaidSoFar 
 
-// Task 1 
-
-const firstName = "Jaishal";
-const secondName = "Mehta";
-const myLocation = "London";
-const starSign = "Libra";
-
-console.log(firstName);
-console.log(secondName);
-console.log(myLocation);
-console.log(starSign);
-
-console.log(`%c` + "Hi - My name is " + firstName + " " + secondName + " and I live in " + myLocation, `color: orange; background-color: black;  font-weight: bold; font-size: 20px; padding: 10px`)
-
-
+console.log(`The total bill is £${totalMoney} the remaining amount of money to be paid is £${totalLeftToPay}`)
