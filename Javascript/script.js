@@ -1,34 +1,25 @@
-// this is a simple console logging statement
-console.log("Hello World!");
+// FUNCTIONS
 
-// different types of console logging 
+// Task 6
 
-const message = "This is a message"; 
+let x = subtract(94, 48);
 
-console.log(message);
+function subtract(num1, num2) {
+    return num1 - num2;
+};
 
-console.info(message);
+console.log(x);
 
-console.warn(message);
+welcome = (fullName, age) => {
+    console.log("My name is ${fullName} and I am ${age} years old")
+};
 
-console.error(message);
+welcome("Jaishal Mehta", 23);
 
-// to make your console log look unique you can insert HTML styling 
+let powerUp1 = powerUp(4,9)
 
-console.log(`%c` + message, `color: black; background-color: white; font-size: 20px; padding: 5px`)
+function powerUp(n1,n2) {
+    return Math.pow(n1,n2);
+};
 
-// Task 1 
-
-const firstName = "Jaishal";
-const secondName = "Mehta";
-const myLocation = "London";
-const starSign = "Libra";
-
-console.log(firstName);
-console.log(secondName);
-console.log(myLocation);
-console.log(starSign);
-
-console.log(`%c` + "Hi - My name is " + firstName + " " + secondName + " and I live in " + myLocation, `color: orange; background-color: black;  font-weight: bold; font-size: 20px; padding: 10px`)
-
-
+console.log(powerUp1)
